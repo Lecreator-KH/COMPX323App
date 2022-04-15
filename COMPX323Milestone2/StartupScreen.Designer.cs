@@ -1,6 +1,6 @@
 ﻿namespace COMPX323Milestone2
 {
-    partial class Form1
+    partial class StartupScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,7 @@
             this.buttonLoginOrganiser.UseVisualStyleBackColor = true;
             this.buttonLoginOrganiser.Click += new System.EventHandler(this.buttonLoginOrganiser_Click);
             // 
-            // Form1
+            // StartupScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,8 +71,8 @@
             this.Controls.Add(this.buttonLoginOrganiser);
             this.Controls.Add(this.buttonLoginViewer);
             this.Controls.Add(this.buttonLoginTeam);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "StartupScreen";
+            this.Text = "StartupScreen";
             this.ResumeLayout(false);
 
         }
