@@ -16,25 +16,5 @@ namespace COMPX323Milestone2
         {
             InitializeComponent();
         }
-
-        private void buttonAddMember_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonRemoveMember_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonViewMember_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonViewEvent_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

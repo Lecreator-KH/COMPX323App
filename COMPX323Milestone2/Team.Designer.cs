@@ -87,7 +87,6 @@
             this.buttonAddMember.TabIndex = 4;
             this.buttonAddMember.Text = "Add Member";
             this.buttonAddMember.UseVisualStyleBackColor = true;
-            this.buttonAddMember.Click += new System.EventHandler(this.buttonAddMember_Click);
             // 
             // buttonRemoveMember
             // 
@@ -98,7 +97,6 @@
             this.buttonRemoveMember.TabIndex = 5;
             this.buttonRemoveMember.Text = "Remove Member";
             this.buttonRemoveMember.UseVisualStyleBackColor = true;
-            this.buttonRemoveMember.Click += new System.EventHandler(this.buttonRemoveMember_Click);
             // 
             // buttonViewMember
             // 
@@ -109,7 +107,6 @@
             this.buttonViewMember.TabIndex = 6;
             this.buttonViewMember.Text = "View Member";
             this.buttonViewMember.UseVisualStyleBackColor = true;
-            this.buttonViewMember.Click += new System.EventHandler(this.buttonViewMember_Click);
             // 
             // buttonViewEvent
             // 
@@ -120,7 +117,6 @@
             this.buttonViewEvent.TabIndex = 7;
             this.buttonViewEvent.Text = "View Event";
             this.buttonViewEvent.UseVisualStyleBackColor = true;
-            this.buttonViewEvent.Click += new System.EventHandler(this.buttonViewEvent_Click);
             // 
             // label3
             // 
