@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Organiser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organiser.Designer.cs">
+      <DependentUpon>Organiser.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartupScreen.cs">
       <SubType>Form</SubType>
     </Compile>
