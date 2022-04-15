@@ -10,7 +10,7 @@ namespace COMPX323Milestone2
     class ConnectToOracle
     {
         string oradb = "Data Source=ORCL;User Id=hr;Password=hr;";
-        OracleConnection conn = new OracleConnection(oradb);  // C#
+        OracleConnection conn = new OracleConnection();  // C#
         
     }
 }

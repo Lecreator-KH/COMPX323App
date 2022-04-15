@@ -16,7 +16,7 @@ namespace COMPX323Milestone2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartupScreen());
+            Application.Run(new StartupScreen(Form1));
         }
     }
 }
