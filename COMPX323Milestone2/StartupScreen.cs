@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace COMPX323Milestone2
 {
-    public partial class Form1 : Form
+    public partial class StartupScreen : Form
     {
-        public Form1()
+        public StartupScreen()
         {
             InitializeComponent();
         }
