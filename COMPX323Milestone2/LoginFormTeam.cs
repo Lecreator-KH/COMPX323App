@@ -34,12 +34,22 @@ namespace COMPX323Milestone2
 
             try
             {
-               
+                // Get username and password from textboxes.
+                username = textBoxUsername.Text.Trim();
+                password = textBoxPassword.Text.Trim();
+
             }
             catch
             {
-                
+                //Error message, more useful when you are storing numbers etc. into the database.
+                MessageBox.Show("Username or Password given is in an incorrect format.");
+                textBoxUsername.Text = "";
+                textBoxPassword.Text = "";
+                textBoxUsername.Focus();
+                return;
             }
+
+
         }
     }
 }

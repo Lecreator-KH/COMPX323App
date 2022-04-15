@@ -43,6 +43,7 @@
             this.buttonLogin.TabIndex = 9;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // label1
             // 
@@ -80,7 +81,7 @@
             this.textBoxUsername.Size = new System.Drawing.Size(121, 21);
             this.textBoxUsername.TabIndex = 5;
             // 
-            // Form4
+            // LoginFormOrganiser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,7 +91,7 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.textBoxUsername);
-            this.Name = "Form4";
+            this.Name = "LoginFormOrganiser";
             this.Text = "Form4";
             this.ResumeLayout(false);
             this.PerformLayout();
