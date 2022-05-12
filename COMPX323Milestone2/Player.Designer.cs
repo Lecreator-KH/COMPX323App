@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.labelUserName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxSport
@@ -62,7 +63,7 @@
             // buttonUpcomingEvent
             // 
             this.buttonUpcomingEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpcomingEvent.Location = new System.Drawing.Point(99, 162);
+            this.buttonUpcomingEvent.Location = new System.Drawing.Point(138, 271);
             this.buttonUpcomingEvent.Name = "buttonUpcomingEvent";
             this.buttonUpcomingEvent.Size = new System.Drawing.Size(110, 50);
             this.buttonUpcomingEvent.TabIndex = 17;
@@ -72,7 +73,7 @@
             // listBoxTeamMember
             // 
             this.listBoxTeamMember.FormattingEnabled = true;
-            this.listBoxTeamMember.Location = new System.Drawing.Point(405, 162);
+            this.listBoxTeamMember.Location = new System.Drawing.Point(486, 271);
             this.listBoxTeamMember.Name = "listBoxTeamMember";
             this.listBoxTeamMember.Size = new System.Drawing.Size(296, 264);
             this.listBoxTeamMember.TabIndex = 13;
@@ -81,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(472, 101);
+            this.label2.Location = new System.Drawing.Point(576, 234);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 24);
             this.label2.TabIndex = 12;
@@ -110,7 +111,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(99, 228);
+            this.button1.Location = new System.Drawing.Point(138, 337);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 50);
             this.button1.TabIndex = 20;
@@ -120,18 +121,29 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(99, 297);
+            this.button2.Location = new System.Drawing.Point(138, 406);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 50);
             this.button2.TabIndex = 21;
             this.button2.Text = "Watch Event";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // labelUserName
+            // 
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserName.Location = new System.Drawing.Point(150, 126);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(153, 24);
+            this.labelUserName.TabIndex = 22;
+            this.labelUserName.Text = "Welcome User!";
+            // 
             // Player
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(804, 558);
+            this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxSport);
@@ -159,5 +171,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelUserName;
     }
 }

@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
     <Compile Include="Oracle.cs" />
     <Compile Include="Player.cs">
       <SubType>Form</SubType>
@@ -89,6 +95,9 @@
     <Compile Include="ManageTeam.Designer.cs">
       <DependentUpon>ManageTeam.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Player.resx">
       <DependentUpon>Player.cs</DependentUpon>
     </EmbeddedResource>
