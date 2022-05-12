@@ -39,6 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxSport = new System.Windows.Forms.TextBox();
             this.buttonAddEvent = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonUpcomingEvent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +85,7 @@
             // buttonAddMember
             // 
             this.buttonAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddMember.Location = new System.Drawing.Point(172, 163);
+            this.buttonAddMember.Location = new System.Drawing.Point(67, 168);
             this.buttonAddMember.Name = "buttonAddMember";
             this.buttonAddMember.Size = new System.Drawing.Size(110, 50);
             this.buttonAddMember.TabIndex = 4;
@@ -93,7 +96,7 @@
             // buttonRemoveMember
             // 
             this.buttonRemoveMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemoveMember.Location = new System.Drawing.Point(172, 219);
+            this.buttonRemoveMember.Location = new System.Drawing.Point(212, 168);
             this.buttonRemoveMember.Name = "buttonRemoveMember";
             this.buttonRemoveMember.Size = new System.Drawing.Size(110, 50);
             this.buttonRemoveMember.TabIndex = 5;
@@ -103,7 +106,7 @@
             // buttonViewMember
             // 
             this.buttonViewMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewMember.Location = new System.Drawing.Point(172, 275);
+            this.buttonViewMember.Location = new System.Drawing.Point(67, 236);
             this.buttonViewMember.Name = "buttonViewMember";
             this.buttonViewMember.Size = new System.Drawing.Size(110, 50);
             this.buttonViewMember.TabIndex = 6;
@@ -113,7 +116,7 @@
             // buttonViewEvent
             // 
             this.buttonViewEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewEvent.Location = new System.Drawing.Point(172, 331);
+            this.buttonViewEvent.Location = new System.Drawing.Point(212, 236);
             this.buttonViewEvent.Name = "buttonViewEvent";
             this.buttonViewEvent.Size = new System.Drawing.Size(110, 50);
             this.buttonViewEvent.TabIndex = 7;
@@ -143,18 +146,52 @@
             // buttonAddEvent
             // 
             this.buttonAddEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddEvent.Location = new System.Drawing.Point(172, 387);
+            this.buttonAddEvent.Location = new System.Drawing.Point(67, 304);
             this.buttonAddEvent.Name = "buttonAddEvent";
             this.buttonAddEvent.Size = new System.Drawing.Size(110, 50);
             this.buttonAddEvent.TabIndex = 10;
             this.buttonAddEvent.Text = "Add Event";
             this.buttonAddEvent.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(212, 371);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(110, 50);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "Watch Event";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(67, 371);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 50);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Past Event";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // buttonUpcomingEvent
+            // 
+            this.buttonUpcomingEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpcomingEvent.Location = new System.Drawing.Point(212, 304);
+            this.buttonUpcomingEvent.Name = "buttonUpcomingEvent";
+            this.buttonUpcomingEvent.Size = new System.Drawing.Size(110, 50);
+            this.buttonUpcomingEvent.TabIndex = 32;
+            this.buttonUpcomingEvent.Text = "Upcoming Event";
+            this.buttonUpcomingEvent.UseVisualStyleBackColor = true;
+            // 
             // ManageTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonUpcomingEvent);
             this.Controls.Add(this.buttonAddEvent);
             this.Controls.Add(this.textBoxSport);
             this.Controls.Add(this.label3);
@@ -186,5 +223,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxSport;
         private System.Windows.Forms.Button buttonAddEvent;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonUpcomingEvent;
     }
 }

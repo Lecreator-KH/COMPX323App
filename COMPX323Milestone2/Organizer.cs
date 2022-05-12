@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace COMPX323Milestone2
 {
-    public partial class ManageTeam : Form
+    public partial class Organizer : Form
     {
-        public ManageTeam()
+        public Organizer()
         {
             InitializeComponent();
-        }
-
-        private void buttonAddMember_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

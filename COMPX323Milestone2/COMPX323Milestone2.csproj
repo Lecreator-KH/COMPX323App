@@ -57,6 +57,12 @@
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="Oracle.cs" />
+    <Compile Include="Organizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer.Designer.cs">
+      <DependentUpon>Organizer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer.resx">
+      <DependentUpon>Organizer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Player.resx">
       <DependentUpon>Player.cs</DependentUpon>
