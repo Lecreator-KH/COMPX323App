@@ -38,6 +38,7 @@
             this.buttonViewEvent = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxSport = new System.Windows.Forms.TextBox();
+            this.buttonAddEvent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +82,7 @@
             // buttonAddMember
             // 
             this.buttonAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddMember.Location = new System.Drawing.Point(172, 168);
+            this.buttonAddMember.Location = new System.Drawing.Point(172, 163);
             this.buttonAddMember.Name = "buttonAddMember";
             this.buttonAddMember.Size = new System.Drawing.Size(110, 50);
             this.buttonAddMember.TabIndex = 4;
@@ -92,7 +93,7 @@
             // buttonRemoveMember
             // 
             this.buttonRemoveMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemoveMember.Location = new System.Drawing.Point(172, 224);
+            this.buttonRemoveMember.Location = new System.Drawing.Point(172, 219);
             this.buttonRemoveMember.Name = "buttonRemoveMember";
             this.buttonRemoveMember.Size = new System.Drawing.Size(110, 50);
             this.buttonRemoveMember.TabIndex = 5;
@@ -102,7 +103,7 @@
             // buttonViewMember
             // 
             this.buttonViewMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewMember.Location = new System.Drawing.Point(172, 280);
+            this.buttonViewMember.Location = new System.Drawing.Point(172, 275);
             this.buttonViewMember.Name = "buttonViewMember";
             this.buttonViewMember.Size = new System.Drawing.Size(110, 50);
             this.buttonViewMember.TabIndex = 6;
@@ -112,7 +113,7 @@
             // buttonViewEvent
             // 
             this.buttonViewEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewEvent.Location = new System.Drawing.Point(172, 336);
+            this.buttonViewEvent.Location = new System.Drawing.Point(172, 331);
             this.buttonViewEvent.Name = "buttonViewEvent";
             this.buttonViewEvent.Size = new System.Drawing.Size(110, 50);
             this.buttonViewEvent.TabIndex = 7;
@@ -139,11 +140,22 @@
             this.textBoxSport.Size = new System.Drawing.Size(163, 22);
             this.textBoxSport.TabIndex = 9;
             // 
-            // Team
+            // buttonAddEvent
+            // 
+            this.buttonAddEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddEvent.Location = new System.Drawing.Point(172, 387);
+            this.buttonAddEvent.Name = "buttonAddEvent";
+            this.buttonAddEvent.Size = new System.Drawing.Size(110, 50);
+            this.buttonAddEvent.TabIndex = 10;
+            this.buttonAddEvent.Text = "Add Event";
+            this.buttonAddEvent.UseVisualStyleBackColor = true;
+            // 
+            // ManageTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAddEvent);
             this.Controls.Add(this.textBoxSport);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonViewEvent);
@@ -154,7 +166,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTeamName);
             this.Controls.Add(this.label1);
-            this.Name = "Team";
+            this.Name = "ManageTeam";
             this.Text = "Team";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,5 +185,6 @@
         private System.Windows.Forms.Button buttonViewEvent;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxSport;
+        private System.Windows.Forms.Button buttonAddEvent;
     }
 }
