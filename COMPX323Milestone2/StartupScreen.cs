@@ -22,9 +22,11 @@ namespace COMPX323Milestone2
             //Hides the login page form from user
             // this.Hide();
             //Create a Register Page object to change to
-            LoginFormTeam loginFormTeam = new LoginFormTeam();
-            loginFormTeam.Owner = this;
-            loginFormTeam.ShowDialog();
+            //LoginFormTeam loginFormTeam = new LoginFormTeam();
+            //loginFormTeam.Owner = this;
+            //loginFormTeam.ShowDialog();
+            Register register = new Register();
+            register.ShowDialog();
             //close the login page we are currently on
             // this.Close();
         }
