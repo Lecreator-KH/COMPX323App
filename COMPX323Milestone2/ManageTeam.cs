@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace COMPX323Milestone2
 {
-    public partial class Team : Form
+    public partial class ManageTeam : Form
     {
-        public Team()
+        public ManageTeam()
         {
             InitializeComponent();
         }

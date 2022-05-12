@@ -1,6 +1,6 @@
 ﻿namespace COMPX323Milestone2
 {
-    partial class Team
+    partial class ManageTeam
     {
         /// <summary>
         /// Required designer variable.
