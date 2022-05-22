@@ -15,6 +15,7 @@ public class Generator{
 
     ArrayList<String> letters = new ArrayList<String>();
     List<String> players = new ArrayList<>();
+    List<String[]> events = new ArrayList<>();
 
     public void populateLetters(){
 
@@ -36,7 +37,8 @@ public class Generator{
     public void start(){
 
         populateLetters();
-        // getPerson();
+        getEvent();
+        getPerson();
         // System.out.println(getLocation());
         //to run this you need to uncomment the wanted section.
         //when running java Generator > team.txt for example when you want to generate the correct thing
@@ -55,18 +57,18 @@ public class Generator{
 
         // }
         //events
-         for(int i=0; i<100000; i++){
-            int wordLength=getRandomNumber(3 , 15);
-            int desLength=getRandomNumber(3 , 15);
-            String mainSponsor=genWord(wordLength);
-            String description =genWord(desLength);
-            String date = genDate();
-            String startTime=genStartTime();
-            String endTime=genEndTime(eventStart);
-            String location=getLocation();
-            String organizer=getOrganizer();
-             System.out.println(date+","+startTime+","+location+","+endTime+","+organizer+","+mainSponsor+","+description);
-         }
+        //  for(int i=0; i<100000; i++){
+        //     int wordLength=getRandomNumber(3 , 15);
+        //     int desLength=getRandomNumber(3 , 15);
+        //     String mainSponsor=genWord(wordLength);
+        //     String description =genWord(desLength);
+        //     String date = genDate();
+        //     String startTime=genStartTime();
+        //     String endTime=genEndTime(eventStart);
+        //     String location=getLocation();
+        //     String organizer=getOrganizer();
+        //      System.out.println(date+","+startTime+","+location+","+endTime+","+organizer+","+mainSponsor+","+description);
+        //  }
          
         //teams
         // for(int i=0; i<1000; i++){
@@ -114,6 +116,46 @@ public class Generator{
         //     String venue = genWord(getRandomNumber(10, 20));
         //     System.out.println(venue);
         // }
+        events.get(0)[0] = events.get(0)[0].substring(3);
+        // Run In
+        // for(int i = 0; i < 100000; i++) {
+        //     String date = events.get(i)[0];
+        //     String startTime=events.get(i)[1];
+        //     String location=events.get(i)[2];
+        //     String eventType=getEventType();
+        //     System.out.println(date+","+startTime+","+location+","+eventType);
+        // }
+
+        // Watches
+        for(int i = 0; i < 100000; i++) {
+            String date = events.get(i)[0];
+            String startTime=events.get(i)[1];
+            String location=events.get(i)[2];
+            int index = getRandomNumber(0, players.size()-1);
+            String player = players.get(index);
+            System.out.println(player+","+date+","+startTime+","+location);
+        }
+    }
+
+    
+    public void getEvent() {
+        String file = "sportEvent.csv";
+        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line = "";
+            while ((line = br.readLine()) != null) {
+                // System.out.println(line);
+                String[] x = line.split(",");
+                // System.out.println(x[0]);
+                events.add(x);
+            }
+        } catch (Exception e) {
+          //Some error logging
+        }
+        // for (String string : players) {
+        //     System.out.println(string);
+        // }
+        // System.out.println(players.size());
+        return;
     }
 
     public String getSport() {
@@ -219,6 +261,15 @@ public class Generator{
             return "Outdoor";
         }
         return "Indoor";
+    }
+
+    public String getEventType() {
+        int x = getRandomNumber(0,2);
+        // System.out.println(x);
+        if(x == 1) {
+            return "In Person";
+        }
+        return "Streaming Platform";
     }
 
     public String genPh(){
