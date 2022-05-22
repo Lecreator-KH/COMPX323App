@@ -45,5 +45,63 @@ namespace COMPX323Milestone2
                 textBoxOrganisation.Enabled = false;
             }
         }
+<<<<<<< HEAD
+=======
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            string username, password, email, firstname, lastname, organisation, phone;
+
+            try
+            {
+                // If role is not chosen, display message
+                if (comboBoxRole.SelectedItem == null)
+                {
+                    MessageBox.Show("Choose your role.");               
+                }
+                else
+                {
+                    // Get data from textboxes
+                    username = textBoxUsername.Text;
+                    password = textBoxPassword.Text;
+                    email = textBoxEmail.Text;
+                    firstname = textBoxFirstname.Text;
+                    lastname = textBoxLastname.Text;
+
+                    // If register for an organiser, get organisation and phone data
+                    if (comboBoxRole.SelectedItem.ToString() == "Organizer")
+                    {
+                        organisation = textBoxOrganisation.Text;
+                        phone = textBoxPhone.Text;
+
+                        //Debug. display datat for organisation
+                        MessageBox.Show("username: " + username + "\n" +
+                                        "password: " + password + "\n" +
+                                        "email: " + email + "\n" +
+                                        "firstname: " + firstname + "\n" +
+                                        "lastname: " + lastname + "\n" +
+                                         "organisation: " + organisation + "\n" +
+                                        "phone: " + phone + "\n");
+                    }
+                    else
+                    {
+                        //Debug. display datat for others
+                        MessageBox.Show("username: " + username + "\n" +
+                                        "password: " + password + "\n" +
+                                        "email: " + email + "\n" +
+                                        "firstname: " + firstname + "\n" +
+                                        "lastname: " + lastname + "\n");
+                    }
+                                                                  
+                }
+                
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+>>>>>>> Add project files.
     }
 }
