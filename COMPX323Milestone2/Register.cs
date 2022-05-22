@@ -45,8 +45,6 @@ namespace COMPX323Milestone2
                 textBoxOrganisation.Enabled = false;
             }
         }
-<<<<<<< HEAD
-=======
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
@@ -102,6 +100,5 @@ namespace COMPX323Milestone2
                 MessageBox.Show(ex.Message);
             }
         }
->>>>>>> Add project files.
     }
 }

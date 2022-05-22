@@ -31,8 +31,6 @@ namespace COMPX323Milestone2
             // this.Close();
         }
 
-<<<<<<< HEAD
-=======
         private void buttonTeam_Click(object sender, EventArgs e)
         {
             LoginFormTeam organiserLoginForm = new LoginFormTeam();
@@ -40,7 +38,6 @@ namespace COMPX323Milestone2
             organiserLoginForm.ShowDialog();
         }
 
->>>>>>> Add project files.
         private void buttonLoginViewer_Click(object sender, EventArgs e)
         {
             LoginFormViewer viewerLoginForm = new LoginFormViewer();
@@ -54,10 +51,7 @@ namespace COMPX323Milestone2
             organiserLoginForm.Owner = this;
             organiserLoginForm.ShowDialog();
         }
-<<<<<<< HEAD
-=======
 
         
->>>>>>> Add project files.
     }
 }

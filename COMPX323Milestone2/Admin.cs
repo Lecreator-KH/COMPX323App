@@ -14,7 +14,6 @@ namespace COMPX323Milestone2
     {
         public Admin()
         {
-            //Test
             InitializeComponent();
         }
     }
