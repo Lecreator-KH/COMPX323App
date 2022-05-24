@@ -16,6 +16,7 @@ public class Generator{
     ArrayList<String> letters = new ArrayList<String>();
     List<String> players = new ArrayList<>();
     List<String[]> events = new ArrayList<>();
+    List<String[]> teamList = new ArrayList<>();
 
     public void populateLetters(){
 
@@ -39,6 +40,7 @@ public class Generator{
         populateLetters();
         getEvent();
         getPerson();
+        getTeam();
         // System.out.println(getLocation());
         //to run this you need to uncomment the wanted section.
         //when running java Generator > team.txt for example when you want to generate the correct thing
@@ -127,14 +129,28 @@ public class Generator{
         // }
 
         // Watches
-        for(int i = 0; i < 100000; i++) {
-            String date = events.get(i)[0];
-            String startTime=events.get(i)[1];
-            String location=events.get(i)[2];
-            int index = getRandomNumber(0, players.size()-1);
-            String player = players.get(index);
-            System.out.println(player+","+date+","+startTime+","+location);
+        // for(int i = 0; i < 100000; i++) {
+        //    String date = events.get(i)[0];
+        //    String startTime=events.get(i)[1];
+        //    String location=events.get(i)[2];
+        //    int index = getRandomNumber(0, players.size()-1);
+        //    String player = players.get(index);
+        //    System.out.println(player+","+date+","+startTime+","+location);
+        // }
+        // Attends
+        int counter = 0;
+        for (String[] strings : teamList) {
+            if(strings[5] == teamList.get(counter)[5] && counter < teamList.size())
+            {
+                String teamID = strings[0];
+                String date = events.get(counter)[0];
+                String startTime=events.get(counter)[1];
+                String location=events.get(counter)[2];
+                System.out.println(teamID+","+date+","+startTime+","+location);
+                counter++;
+            }
         }
+        
     }
 
     
@@ -180,6 +196,27 @@ public class Generator{
         int index = getRandomNumber(0,content.size());
         
         return content.get(index);
+    }
+
+    public void getTeam() {
+        String file = "team.csv";
+        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line = "";
+            while ((line = br.readLine()) != null) {
+                // System.out.println(line);
+                String[] x = line.split(",");
+                // System.out.println(x[0]);
+                teamList.add(x);
+            }
+        } catch (Exception e) {
+          //Some error logging
+        }
+        // for (String string : content) {
+            // System.out.println(string);
+        // }
+        // System.out.println(content.size());
+        
+        return ;
     }
 
     public String getLocation() {
