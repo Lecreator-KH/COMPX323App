@@ -144,6 +144,7 @@ Select * From SportEvent;
 Select * From ViewingExperience;
 Select * From RunIn;
 Select * From Attends;
+<<<<<<< HEAD
 Select eventdate, TO_CHAR(startTime , 'HH:MI'), location, person From Watches;
 
 -- Hash
@@ -179,6 +180,10 @@ Create cluster hashCluster (
 Drop cluster hashCluster;
 
 Select * From Team Where (TeamID = 99);
+=======
+Select TO_CHAR(startTime, 'HH:MI') From Watches;
+
+>>>>>>> 9e6455849451fa08cec13910a11ac780b59f5d0b
 
 
 
