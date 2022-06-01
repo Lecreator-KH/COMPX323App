@@ -28,8 +28,7 @@ Organization varchar(50) not null,
 PhoneNumber varchar(20),
 
 CONSTRAINT PKPlayer PRIMARY KEY (Username),
-CONSTRAINT FKPlayer FOREIGN KEY (Username) REFERENCES Person ON DELETE CASCADE,
-CONSTRAINT phoneCheck check (PhoneNumber like '%[^0-9]%')
+CONSTRAINT FKPlayer FOREIGN KEY (Username) REFERENCES Person ON DELETE CASCADE
 );
 
 create table Player(
@@ -66,8 +65,7 @@ Website varchar(50) not null,
 Sport varchar(30),
 
 CONSTRAINT PKTeam PRIMARY KEY (TeamID),
-CONSTRAINT FKSport foreign key(Sport) references Sport(Name),
-CONSTRAINT phoneCheck2 check (PhoneNumber like '%[^0-9]%')
+CONSTRAINT FKSport foreign key(Sport) references Sport(Name)
 );
 
 create table Venue(
@@ -129,11 +127,59 @@ CONSTRAINT FKPerson foreign key(Person) references Person(Username),
 CONSTRAINT FKEventDate3 foreign key(EventDate, StartTime, Location) references SportEvent(EventDate, StartTime, Location)
 );
 
-Select * from Person;
-Select * from Organizer;
-Select * from Setting;
 Insert into Setting values('Indoor');
 Insert into Setting values('Outdoor');
 
 Insert into ViewingExperience values('In Person');
 Insert into ViewingExperience values('Streaming Platform');
+
+Select * From Person;
+Select * From Organizer;
+Select * From Player;
+Select * From Setting;
+Select * From Sport;
+Select * From Team;
+Select * From Venue;
+Select * From SportEvent;
+Select * From ViewingExperience;
+Select * From RunIn;
+Select * From Attends;
+Select eventdate, TO_CHAR(startTime , 'HH:MI'), location, person From Watches;
+
+-- Hash
+-- B-Tree Index
+Create Index bTreeMaxplayer on Sport(Maxplayer);
+Create Index bTreeMinplayer on Sport(Minplayer);
+
+Drop index bTreeMaxplayer;
+Drop index bTreeMinplayer;
+
+Select * From Sport where minplayer > 1 and minplayer < 3;
+Select * From Sport where maxplayer > 7 and maxplayer < 10;
+
+
+-- Hash cluster
+create table Team(
+TeamID NUMBER(*,0),
+Name varchar(30) not null,
+TeamEmail varchar(50) not null,
+PhoneNumber varchar(20),
+Website varchar(50) not null,
+Sport varchar(30),
+
+CONSTRAINT FKSport foreign key(Sport) references Sport(Name)
+) cluster hashCluster(TeamID);
+
+DROP table Team;
+Create cluster hashCluster (
+    TeamID number(*,0))
+    HASHKeys 100 Hash is TeamID
+    size 256;
+    
+Drop cluster hashCluster;
+
+Select * From Team Where (TeamID = 99);
+
+
+
+
