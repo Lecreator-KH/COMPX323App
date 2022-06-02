@@ -33,11 +33,12 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelUsername = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(331, 271);
+            this.buttonLogin.Location = new System.Drawing.Point(243, 200);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(150, 50);
             this.buttonLogin.TabIndex = 9;
@@ -49,7 +50,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(302, 180);
+            this.label1.Location = new System.Drawing.Point(41, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 8;
@@ -58,7 +59,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(377, 177);
+            this.textBoxPassword.Location = new System.Drawing.Point(116, 229);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(121, 21);
             this.textBoxPassword.TabIndex = 7;
@@ -67,7 +68,7 @@
             // 
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(302, 131);
+            this.labelUsername.Location = new System.Drawing.Point(41, 203);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(69, 15);
             this.labelUsername.TabIndex = 6;
@@ -76,16 +77,27 @@
             // textBoxUsername
             // 
             this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.Location = new System.Drawing.Point(377, 130);
+            this.textBoxUsername.Location = new System.Drawing.Point(116, 202);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(121, 21);
             this.textBoxUsername.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(139, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Viewer Login";
             // 
             // LoginFormViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(429, 297);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPassword);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.Label label2;
     }
 }

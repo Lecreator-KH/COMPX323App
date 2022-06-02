@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Oracle.ManagedDataAccess.Client;
+
 namespace COMPX323Milestone2
 {
     public partial class LoginFormTeam : Form
@@ -37,6 +39,20 @@ namespace COMPX323Milestone2
                 // Get username and password from textboxes.
                 username = textBoxUsername.Text.Trim();
                 password = textBoxPassword.Text.Trim();
+
+                string oradb = "Data Source=ORCL;User Id=ba81;Password=ora197664;";
+                OracleConnection conn = new OracleConnection(oradb);  // C#
+                conn.Open();
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "select TEAMID from player";
+                cmd.CommandType = CommandType.Text;
+                OracleDataReader dr = cmd.ExecuteReader();
+                dr.Read();
+                label1.Text = dr.GetString(0);
+                conn.Dispose();
+
+
 
             }
             catch
