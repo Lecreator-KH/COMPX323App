@@ -18,6 +18,8 @@ namespace COMPX323Milestone2
         {
             InitializeComponent();
         }
+        public string usernameAdminTeam;
+        public string passwordAdminTeam;
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
@@ -40,7 +42,7 @@ namespace COMPX323Milestone2
                 username = textBoxUsername.Text.Trim();
                 password = textBoxPassword.Text.Trim();
 
-                string oradb = "Data Source=ORCL;User Id=ba81;Password=ora197664;";
+                string oradb = "Data Source=ORCL;User Id="+usernameAdminTeam+";Password="+passwordAdminTeam+";";
                 OracleConnection conn = new OracleConnection(oradb);  // C#
                 conn.Open();
                 OracleCommand cmd = new OracleCommand();

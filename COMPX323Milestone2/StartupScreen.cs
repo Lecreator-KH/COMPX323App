@@ -16,6 +16,10 @@ namespace COMPX323Milestone2
         {
             InitializeComponent();
         }
+            //this is for making the oracle server connect to your account, 
+            //set your usename and password here
+        public string usernameAdmin="ba81";
+        public string passwordAdmin="ora197664";
 
         private void buttonLoginTeam_Click(object sender, EventArgs e)
         {
@@ -33,15 +37,19 @@ namespace COMPX323Milestone2
 
         private void buttonTeam_Click(object sender, EventArgs e)
         {
-            LoginFormTeam organiserLoginForm = new LoginFormTeam();
-            organiserLoginForm.Owner = this;
-            organiserLoginForm.ShowDialog();
+            LoginFormTeam teamLoginForm = new LoginFormTeam();
+            teamLoginForm.Owner = this;
+            teamLoginForm.usernameAdminTeam = usernameAdmin;
+            teamLoginForm.passwordAdminTeam = passwordAdmin;
+            teamLoginForm.ShowDialog();
         }
 
         private void buttonLoginViewer_Click(object sender, EventArgs e)
         {
             LoginFormViewer viewerLoginForm = new LoginFormViewer();
             viewerLoginForm.Owner = this;
+            viewerLoginForm.usernameAdminViewer = usernameAdmin;
+            viewerLoginForm.passwordAdminViewer = passwordAdmin;
             viewerLoginForm.ShowDialog();
         }
 
@@ -49,6 +57,8 @@ namespace COMPX323Milestone2
         {
             LoginFormOrganiser organiserLoginForm = new LoginFormOrganiser();
             organiserLoginForm.Owner = this;
+            organiserLoginForm.usernameAdminOrganiser = usernameAdmin;
+            organiserLoginForm.passwordAdminOrganiser = passwordAdmin;
             organiserLoginForm.ShowDialog();
         }
 

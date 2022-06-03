@@ -16,7 +16,8 @@ namespace COMPX323Milestone2
         {
             InitializeComponent();
         }
-
+        public string usernameAdminViewer;
+        public string passwordAdminViewer;
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             string username, password;
