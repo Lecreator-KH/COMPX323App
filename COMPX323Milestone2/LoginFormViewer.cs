@@ -41,6 +41,7 @@ namespace COMPX323Milestone2
                 password = textBoxPassword.Text.Trim();
 
                 //ornkhjjn415 username to test
+                //kcll830arpf PASSWORD FOR ABOVE
                 string oradb = "Data Source=oracle.cms.waikato.ac.nz:1521/teaching;User Id=" + usernameAdminViewer + ";Password=" + passwordAdminViewer + ";";
                 OracleConnection conn = new OracleConnection(oradb);  // C#
                 conn.Open();
@@ -50,10 +51,28 @@ namespace COMPX323Milestone2
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader dr = cmd.ExecuteReader();
                 dr.Read();
-                String resultUsername = dr.GetString(0);              
+                String resultUsername = dr.GetString(0);
+
+                cmd.CommandText = "select Password from Person where Username like '" + username + "'";
+                cmd.CommandType = CommandType.Text;
+                OracleDataReader dr2 = cmd.ExecuteReader();
+                dr2.Read();
+                String resultpassword = dr2.GetString(0);
+
+
                 conn.Dispose();
 
-                MessageBox.Show(resultUsername + "exists");
+               
+                if (password.Equals(resultpassword))
+                {
+                    //MessageBox.Show(resultUsername+" "+resultpassword);
+                    Default d = new Default();
+                    d.Owner = this;
+                    d.usernameAdminDefault = usernameAdminViewer;
+                    d.passwordAdminDefault = passwordAdminViewer;
+                    d.ShowDialog();
+
+                }
 
 
             }

@@ -12,6 +12,8 @@ namespace COMPX323Milestone2
 {
     public partial class Default : Form
     {
+        public String usernameAdminDefault;
+        public String passwordAdminDefault;
         public Default()
         {
             InitializeComponent();
