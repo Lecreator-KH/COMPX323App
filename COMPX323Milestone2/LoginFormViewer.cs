@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace COMPX323Milestone2
 {
@@ -38,12 +39,29 @@ namespace COMPX323Milestone2
                 // Get username and password from textboxes.
                 username = textBoxUsername.Text.Trim();
                 password = textBoxPassword.Text.Trim();
-                
+
+                //ornkhjjn415 username to test
+                string oradb = "Data Source=oracle.cms.waikato.ac.nz:1521/teaching;User Id=" + usernameAdminViewer + ";Password=" + passwordAdminViewer + ";";
+                OracleConnection conn = new OracleConnection(oradb);  // C#
+                conn.Open();
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "select USERNAME from Person where Username like '"+username+"'";
+                cmd.CommandType = CommandType.Text;
+                OracleDataReader dr = cmd.ExecuteReader();
+                dr.Read();
+                String resultUsername = dr.GetString(0);              
+                conn.Dispose();
+
+                MessageBox.Show(resultUsername + "exists");
+
+
             }
-            catch
+            catch(Exception ex)
             {
                 //Error message, more useful when you are storing numbers etc. into the database.
-                MessageBox.Show("Username or Password given is in an incorrect format.");
+                MessageBox.Show("Username or Password given is in an incorrect format."+usernameAdminViewer+passwordAdminViewer);
+                Console.WriteLine(ex.Message);
                 textBoxUsername.Text = "";
                 textBoxPassword.Text = "";
                 textBoxUsername.Focus();

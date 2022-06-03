@@ -146,7 +146,7 @@ Select * From RunIn;
 Select * From Attends;
 Select eventdate, TO_CHAR(startTime , 'HH24:MI'), location, person From Watches;
 
-
+select USERNAME from Person where Username like 'ornkhjjn415'
 -- Hash
 -- B-Tree Index
 Create Index btree on Person(firstname);
