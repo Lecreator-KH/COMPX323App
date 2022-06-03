@@ -18,5 +18,10 @@ namespace COMPX323Milestone2
         {
             InitializeComponent();
         }
+
+        private void buttonWatchEvent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

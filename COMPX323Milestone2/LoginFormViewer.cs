@@ -52,14 +52,11 @@ namespace COMPX323Milestone2
                 OracleDataReader dr = cmd.ExecuteReader();
                 dr.Read();
                 String resultUsername = dr.GetString(0);
-
                 cmd.CommandText = "select Password from Person where Username like '" + username + "'";
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader dr2 = cmd.ExecuteReader();
                 dr2.Read();
                 String resultpassword = dr2.GetString(0);
-
-
                 conn.Dispose();
 
                
@@ -70,6 +67,7 @@ namespace COMPX323Milestone2
                     d.Owner = this;
                     d.usernameAdminDefault = usernameAdminViewer;
                     d.passwordAdminDefault = passwordAdminViewer;
+                    d.labelUserName.Text = "Welcome "+username;
                     d.ShowDialog();
 
                 }
