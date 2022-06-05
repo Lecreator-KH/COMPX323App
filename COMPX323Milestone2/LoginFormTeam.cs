@@ -49,19 +49,20 @@ namespace COMPX323Milestone2
 
                 OracleConnection conn = new OracleConnection(oradb);  // C#
                 conn.Open();
-                OracleCommand cmd = new OracleCommand();/*
+                OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "select TEAMID from player";
+                cmd.CommandText = "select TEAMID from player where username like '"+username+"'";
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader dr = cmd.ExecuteReader();
                 dr.Read();
-                String team = dr.GetString(0);*/
+                String team = dr.GetString(0);
+                //MessageBox.Show(team);
                 cmd.Connection = conn;
                 cmd.CommandText = "select USERNAME from player where Username like '" + username + "'";
                 cmd.CommandType = CommandType.Text;
-                OracleDataReader dr = cmd.ExecuteReader();
-                dr.Read();
-                String resultUsername = dr.GetString(0);
+                OracleDataReader dr2 = cmd.ExecuteReader();
+                dr2.Read();
+                String resultUsername = dr2.GetString(0);
 
                 cmd.CommandText = "select password from person where Username like '"+username+"'";
                 cmd.CommandType = CommandType.Text;
@@ -78,7 +79,8 @@ namespace COMPX323Milestone2
                     MessageBox.Show(resultUsername+" "+resultPassword);
                     Player d = new Player();
                     d.Owner = this;
-                    d.txtTeamName.Text = dr.GetString(0);
+                    d.txtTeamName.Text = team;
+                    d.teamid = team;
                     d.conn = conn;
                     d.ShowDialog();
 
