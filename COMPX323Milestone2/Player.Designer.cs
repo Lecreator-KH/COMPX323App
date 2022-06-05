@@ -35,10 +35,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTeamName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonPatEvent = new System.Windows.Forms.Button();
+            this.buttonWatchEvent = new System.Windows.Forms.Button();
             this.labelUserName = new System.Windows.Forms.Label();
             this.buttonMemShow = new System.Windows.Forms.Button();
+            this.listBoxEvents = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // textBoxSport
@@ -64,12 +65,13 @@
             // buttonUpcomingEvent
             // 
             this.buttonUpcomingEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpcomingEvent.Location = new System.Drawing.Point(12, 336);
+            this.buttonUpcomingEvent.Location = new System.Drawing.Point(456, 271);
             this.buttonUpcomingEvent.Name = "buttonUpcomingEvent";
             this.buttonUpcomingEvent.Size = new System.Drawing.Size(110, 50);
             this.buttonUpcomingEvent.TabIndex = 17;
             this.buttonUpcomingEvent.Text = "Upcoming Event";
             this.buttonUpcomingEvent.UseVisualStyleBackColor = true;
+            this.buttonUpcomingEvent.Click += new System.EventHandler(this.buttonUpcomingEvent_Click);
             // 
             // listBoxTeamMember
             // 
@@ -109,25 +111,26 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Team :";
             // 
-            // button1
+            // buttonPatEvent
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 50);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Past Event";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonPatEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPatEvent.Location = new System.Drawing.Point(456, 327);
+            this.buttonPatEvent.Name = "buttonPatEvent";
+            this.buttonPatEvent.Size = new System.Drawing.Size(110, 50);
+            this.buttonPatEvent.TabIndex = 20;
+            this.buttonPatEvent.Text = "Past Event";
+            this.buttonPatEvent.UseVisualStyleBackColor = true;
+            this.buttonPatEvent.Click += new System.EventHandler(this.buttonPatEvent_Click);
             // 
-            // button2
+            // buttonWatchEvent
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 485);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 50);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Watch Event";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonWatchEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonWatchEvent.Location = new System.Drawing.Point(456, 383);
+            this.buttonWatchEvent.Name = "buttonWatchEvent";
+            this.buttonWatchEvent.Size = new System.Drawing.Size(110, 50);
+            this.buttonWatchEvent.TabIndex = 21;
+            this.buttonWatchEvent.Text = "Watch Event";
+            this.buttonWatchEvent.UseVisualStyleBackColor = true;
             // 
             // labelUserName
             // 
@@ -150,15 +153,25 @@
             this.buttonMemShow.UseVisualStyleBackColor = true;
             this.buttonMemShow.Click += new System.EventHandler(this.buttonMemShow_Click);
             // 
+            // listBoxEvents
+            // 
+            this.listBoxEvents.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxEvents.FormattingEnabled = true;
+            this.listBoxEvents.Location = new System.Drawing.Point(572, 271);
+            this.listBoxEvents.Name = "listBoxEvents";
+            this.listBoxEvents.Size = new System.Drawing.Size(311, 264);
+            this.listBoxEvents.TabIndex = 24;
+            // 
             // Player
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 558);
+            this.ClientSize = new System.Drawing.Size(905, 558);
+            this.Controls.Add(this.listBoxEvents);
             this.Controls.Add(this.buttonMemShow);
             this.Controls.Add(this.labelUserName);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonWatchEvent);
+            this.Controls.Add(this.buttonPatEvent);
             this.Controls.Add(this.textBoxSport);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonUpcomingEvent);
@@ -181,10 +194,11 @@
         private System.Windows.Forms.ListBox listBoxTeamMember;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonPatEvent;
+        private System.Windows.Forms.Button buttonWatchEvent;
         private System.Windows.Forms.Label labelUserName;
         public System.Windows.Forms.TextBox txtTeamName;
         private System.Windows.Forms.Button buttonMemShow;
+        private System.Windows.Forms.ListBox listBoxEvents;
     }
 }
