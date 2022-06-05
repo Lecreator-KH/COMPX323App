@@ -146,6 +146,7 @@ Select * From RunIn;
 Select * From Attends;
 Select eventdate, TO_CHAR(startTime , 'HH24:MI'), location, person From Watches;
 
+Select eventdate, TO_CHAR(startTime , 'HH24:MI'), location From SportEvent where startTime like  TO_CHAR('08:32' , 'HH24:MI')
 select USERNAME from Person where Username like 'ornkhjjn415'
 -- Hash
 -- B-Tree Index
