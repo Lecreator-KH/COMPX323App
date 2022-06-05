@@ -39,6 +39,7 @@ CONSTRAINT PKPlayer PRIMARY KEY (Username),
 CONSTRAINT FKPlayer FOREIGN KEY (Username) REFERENCES Person ON DELETE CASCADE,
 CONSTRAINT FKTeamID FOREIGN KEY (TeamID) REFERENCES Team 
 );
+
 create table Setting(
 SettingID varchar(30),
 
