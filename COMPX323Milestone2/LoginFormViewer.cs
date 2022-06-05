@@ -68,6 +68,7 @@ namespace COMPX323Milestone2
                     d.usernameAdminDefault = usernameAdminViewer;
                     d.passwordAdminDefault = passwordAdminViewer;
                     d.labelUserName.Text = "Welcome "+username;
+                    d.userid = username;
                     d.conn = conn;
                     d.ShowDialog();
 

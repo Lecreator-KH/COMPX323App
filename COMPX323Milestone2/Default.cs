@@ -15,6 +15,7 @@ namespace COMPX323Milestone2
     {
         public String usernameAdminDefault;
         public String passwordAdminDefault;
+        public string userid;
         public Default()
         {
             InitializeComponent();
@@ -22,6 +23,21 @@ namespace COMPX323Milestone2
 
         private void buttonWatchEvent_Click(object sender, EventArgs e)
         {
+            listBox2.Items.Clear();
+
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "select * from watches where person like '" + userid + "'";
+            cmd.CommandType = CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                String result1 = dr.GetString(0);
+                String result2 = dr.GetString(1);
+                String result3 = dr.GetString(2);
+                String result4 = dr.GetString(3);
+                listBox2.Items.Add(result1.PadRight(15)+ result2.PadRight(15) + result3.PadRight(15) + result4.PadRight(15) );
+            }
 
         }
         public OracleConnection conn;

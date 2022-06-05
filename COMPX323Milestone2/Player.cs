@@ -19,9 +19,6 @@ namespace COMPX323Milestone2
         {
             InitializeComponent();
             MessageBox.Show(teamid);
-
-
-
         }
 
         private void buttonMemShow_Click(object sender, EventArgs e)

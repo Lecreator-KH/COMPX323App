@@ -1,0 +1,10 @@
+{"username":"jt123", "email":"jt@gmail.com", "password":"123", "firstname":"John", "lastname":"Tan"}
+{"username":"bk456", "email":"bk@hotmail.com", "password":"456", "firstname":"Ben", "lastname":"Key"}
+{"username":"tk789", "email":"tk@yahoo.com", "password":"789", "firstname":"Thomas", "lastname":"Key"}
+{"username":"sb111", "email":"sb@gmail.com", "password":"111", "firstname":"Sally", "lastname":"Brown"}
+{"username":"kk123", "email":"weq@gmail.com", "password":"123", "firstname":"Kai", "lastname":"Wen"}
+{"username":"jj123", "email":"jt66@gmail.com", "password":"123", "firstname":"Jhonny", "lastname":"Brown"}
+{"username":"bk32456", "email":"bk33@hotmail.com", "password":"456", "firstname":"Tristana", "lastname":"Yong"}
+{"username":"tk42789", "email":"tk44@yahoo.com", "password":"789", "firstname":"Thomas", "lastname":"Tan"}
+{"username":"sb64111", "email":"s33b@gmail.com", "password":"111", "firstname":"Garen", "lastname":"Wu"}
+{"username":"kk18623", "email":"we33q@gmail.com", "password":"1234", "firstname":"Karen", "lastname":"Wang"}

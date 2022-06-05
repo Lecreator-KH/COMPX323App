@@ -63,6 +63,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(121, 21);
             this.textBoxPassword.TabIndex = 7;
+            this.textBoxPassword.Text = "kcll830arpf";
             // 
             // labelUsername
             // 
@@ -81,6 +82,7 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(121, 21);
             this.textBoxUsername.TabIndex = 5;
+            this.textBoxUsername.Text = "ornkhjjn415";
             // 
             // label2
             // 

@@ -37,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxDate = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.labelWatch = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelUserName
@@ -63,7 +65,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(355, 134);
+            this.listBox1.Location = new System.Drawing.Point(16, 121);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(309, 238);
             this.listBox1.TabIndex = 27;
@@ -122,11 +124,30 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 33;
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(372, 121);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(309, 238);
+            this.listBox2.TabIndex = 34;
+            // 
+            // labelWatch
+            // 
+            this.labelWatch.AutoSize = true;
+            this.labelWatch.Location = new System.Drawing.Point(369, 92);
+            this.labelWatch.Name = "labelWatch";
+            this.labelWatch.Size = new System.Drawing.Size(70, 13);
+            this.labelWatch.TabIndex = 35;
+            this.labelWatch.Text = "Watched List";
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 449);
+            this.ClientSize = new System.Drawing.Size(938, 449);
+            this.Controls.Add(this.labelWatch);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxDate);
@@ -153,5 +174,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxDate;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label labelWatch;
     }
 }
