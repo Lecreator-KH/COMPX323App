@@ -144,6 +144,7 @@ Select * From SportEvent;
 Select * From ViewingExperience;
 Select * From RunIn;
 Select * From Attends;
+Select * From Watches;
 Select eventdate, TO_CHAR(startTime , 'HH:MI'), location, person From Watches;
 
 -- Hash
@@ -187,3 +188,13 @@ SELECT
      PLAN_TABLE_OUTPUT 
 FROM 
      TABLE(DBMS_XPLAN.DISPLAY());
+TRUNCATE table sport;
+--Select * From Venue;
+--Insert into venue values('Test 1 2 3');
+--
+--create table Test123(
+--Location varchar(50),
+--CONSTRAINT FKLocationTest FOREIGN KEY(Location) REFERENCES Venue(Location)
+--)
+--Drop table Test123
+--Insert into Test123 values('108 Dallow Place')
