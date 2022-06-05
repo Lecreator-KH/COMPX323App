@@ -156,6 +156,11 @@ select * from attends
 select TEAMID from player
 select teamid from player
 
+
+select UserName from player where teamid = '805'
+
+Select * from Sportevent s, attends a where a.location = s.location and teamid like '805'  and s.eventdate > to_date('26/04/19','DD-MM-YY') 
+
 Select eventdate, TO_CHAR(startTime , 'HH24:MI'), location From SportEvent where startTime like  TO_CHAR('08:32' , 'HH24:MI')
 select USERNAME from Person where Username like 'ornkhjjn415'
 -- Hash

@@ -78,6 +78,7 @@
             this.buttonUpcomingEvent.TabIndex = 27;
             this.buttonUpcomingEvent.Text = "Upcoming Event";
             this.buttonUpcomingEvent.UseVisualStyleBackColor = true;
+            this.buttonUpcomingEvent.Click += new System.EventHandler(this.buttonUpcomingEvent_Click);
             // 
             // listBoxTeamMember
             // 
