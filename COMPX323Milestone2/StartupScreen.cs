@@ -19,7 +19,7 @@ namespace COMPX323Milestone2
             //this is for making the oracle server connect to your account, 
             //set your usename and password here
         public string usernameAdmin="kh216";
-        public string passwordAdmin="ora192799";
+        public string passwordAdmin="";
 
         private void buttonLoginTeam_Click(object sender, EventArgs e)
         {
