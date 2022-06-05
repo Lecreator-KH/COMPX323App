@@ -23,6 +23,8 @@ namespace COMPX323Milestone2
 
         private void buttonWatchEvent_Click(object sender, EventArgs e)
         {
+            String[] sarray=listBox1.SelectedItem.ToString().Split(' ');
+            MessageBox.Show(sarray[1]);
             listBox2.Items.Clear();
 
             OracleCommand cmd = new OracleCommand();
@@ -56,7 +58,7 @@ namespace COMPX323Milestone2
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read()) { 
             String resultEventDate = dr.GetString(0);
-            listBox1.Items.Add(resultEventDate);
+            listBox1.Items.Add(resultEventDate.PadRight(15)+"j");
              }
            
            // conn.Dispose();
