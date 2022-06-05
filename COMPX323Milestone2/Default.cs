@@ -23,6 +23,7 @@ namespace COMPX323Milestone2
 
         private void buttonWatchEvent_Click(object sender, EventArgs e)
         {
+            //need better fix
             String[] sarray=listBox1.SelectedItem.ToString().Split(' ');
             MessageBox.Show(sarray[1]);
             listBox2.Items.Clear();
