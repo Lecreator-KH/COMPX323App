@@ -80,6 +80,8 @@ namespace COMPX323Milestone2
                                         "lastname: " + lastname + "\n" +
                                          "organisation: " + organisation + "\n" +
                                         "phone: " + phone + "\n");
+                        Oracle.RegisterPersonOracle(username, password, email, firstname, lastname);
+                        Oracle.RegisterOrganiserOracle(username, organisation, phone);
                     }
                     else
                     {
@@ -89,8 +91,10 @@ namespace COMPX323Milestone2
                                         "email: " + email + "\n" +
                                         "firstname: " + firstname + "\n" +
                                         "lastname: " + lastname + "\n");
+                        Oracle.RegisterPersonOracle(username, password, email, firstname, lastname);
+                        Oracle.RegisterPersonMongoDB(username, password, email, firstname, lastname);
                     }
-                                                                  
+
                 }
                 
                 
