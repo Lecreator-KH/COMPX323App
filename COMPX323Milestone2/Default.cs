@@ -24,18 +24,18 @@ namespace COMPX323Milestone2
         {
 
         }
-
+        public OracleConnection conn;
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             String sport = textBoxSport.Text;
             String date = textBoxDate.Text;
             String comp = comboBox1.Text;
-            string oradb = "Data Source=oracle.cms.waikato.ac.nz:1521/teaching;User Id=" + usernameAdminDefault + ";Password=" + passwordAdminDefault + ";";
-            OracleConnection conn = new OracleConnection(oradb);  // C#
-            conn.Open();
+           // string oradb = "Data Source=oracle.cms.waikato.ac.nz:1521/teaching;User Id=" + usernameAdminDefault + ";Password=" + passwordAdminDefault + ";";
+            //OracleConnection conn = new OracleConnection(oradb);  // C#
+            //conn.Open();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select * from SportEvent where Sport like '" + sport + "' and Eventdate " + comp + "to_date('" + date + "','DD-MON-YY')";
+            cmd.CommandText = "select * from SportEvent where Eventdate = to_date('" + date + "','DD-MM-YY')";
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read()) { 
@@ -43,7 +43,7 @@ namespace COMPX323Milestone2
             listBox1.Items.Add(resultEventDate);
              }
            
-            conn.Dispose();
+           // conn.Dispose();
         }
     }
 }

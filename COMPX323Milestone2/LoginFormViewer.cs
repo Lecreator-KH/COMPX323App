@@ -57,7 +57,7 @@ namespace COMPX323Milestone2
                 OracleDataReader dr2 = cmd.ExecuteReader();
                 dr2.Read();
                 String resultpassword = dr2.GetString(0);
-                conn.Dispose();
+               // conn.Dispose();
 
                
                 if (password.Equals(resultpassword))
@@ -68,6 +68,7 @@ namespace COMPX323Milestone2
                     d.usernameAdminDefault = usernameAdminViewer;
                     d.passwordAdminDefault = passwordAdminViewer;
                     d.labelUserName.Text = "Welcome "+username;
+                    d.conn = conn;
                     d.ShowDialog();
 
                 }
