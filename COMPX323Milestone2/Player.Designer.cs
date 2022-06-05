@@ -44,7 +44,7 @@
             // 
             this.textBoxSport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSport.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSport.Location = new System.Drawing.Point(215, 73);
+            this.textBoxSport.Location = new System.Drawing.Point(123, 62);
             this.textBoxSport.Name = "textBoxSport";
             this.textBoxSport.ReadOnly = true;
             this.textBoxSport.Size = new System.Drawing.Size(163, 22);
@@ -54,7 +54,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(150, 71);
+            this.label3.Location = new System.Drawing.Point(58, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 24);
             this.label3.TabIndex = 18;
@@ -63,7 +63,7 @@
             // buttonUpcomingEvent
             // 
             this.buttonUpcomingEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpcomingEvent.Location = new System.Drawing.Point(138, 271);
+            this.buttonUpcomingEvent.Location = new System.Drawing.Point(12, 336);
             this.buttonUpcomingEvent.Name = "buttonUpcomingEvent";
             this.buttonUpcomingEvent.Size = new System.Drawing.Size(110, 50);
             this.buttonUpcomingEvent.TabIndex = 17;
@@ -73,7 +73,7 @@
             // listBoxTeamMember
             // 
             this.listBoxTeamMember.FormattingEnabled = true;
-            this.listBoxTeamMember.Location = new System.Drawing.Point(486, 271);
+            this.listBoxTeamMember.Location = new System.Drawing.Point(154, 271);
             this.listBoxTeamMember.Name = "listBoxTeamMember";
             this.listBoxTeamMember.Size = new System.Drawing.Size(296, 264);
             this.listBoxTeamMember.TabIndex = 13;
@@ -82,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(576, 234);
+            this.label2.Location = new System.Drawing.Point(152, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 24);
             this.label2.TabIndex = 12;
@@ -92,7 +92,7 @@
             // 
             this.txtTeamName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTeamName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeamName.Location = new System.Drawing.Point(215, 25);
+            this.txtTeamName.Location = new System.Drawing.Point(123, 14);
             this.txtTeamName.Name = "txtTeamName";
             this.txtTeamName.ReadOnly = true;
             this.txtTeamName.Size = new System.Drawing.Size(313, 31);
@@ -102,7 +102,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 25);
+            this.label1.Location = new System.Drawing.Point(13, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 31);
             this.label1.TabIndex = 10;
@@ -111,7 +111,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(138, 337);
+            this.button1.Location = new System.Drawing.Point(12, 412);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 50);
             this.button1.TabIndex = 20;
@@ -121,7 +121,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(138, 406);
+            this.button2.Location = new System.Drawing.Point(12, 485);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 50);
             this.button2.TabIndex = 21;
@@ -132,7 +132,7 @@
             // 
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserName.Location = new System.Drawing.Point(150, 126);
+            this.labelUserName.Location = new System.Drawing.Point(8, 105);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(153, 24);
             this.labelUserName.TabIndex = 22;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 558);
+            this.ClientSize = new System.Drawing.Size(518, 558);
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -167,10 +167,10 @@
         private System.Windows.Forms.Button buttonUpcomingEvent;
         private System.Windows.Forms.ListBox listBoxTeamMember;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTeamName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label labelUserName;
+        public System.Windows.Forms.TextBox txtTeamName;
     }
 }

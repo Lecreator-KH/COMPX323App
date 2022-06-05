@@ -146,6 +146,15 @@ Select * From RunIn;
 Select * From Attends;
 Select eventdate, TO_CHAR(startTime , 'HH24:MI'), location, person From Watches;
 
+Select * from person where username like 'umfamsxr4300'
+select * from SportEvent where Eventdate = to_date('05/07/20','DD-MM-YY')
+
+select * from team
+select USERNAME from player where Username like 'umfamsxr4300'
+select * from attends
+select TEAMID from player
+select teamid from player
+
 Select eventdate, TO_CHAR(startTime , 'HH24:MI'), location From SportEvent where startTime like  TO_CHAR('08:32' , 'HH24:MI')
 select USERNAME from Person where Username like 'ornkhjjn415'
 -- Hash

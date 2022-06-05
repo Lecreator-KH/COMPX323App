@@ -37,30 +37,59 @@ namespace COMPX323Milestone2
             }
 
             try
-            {
+            {   //umfamsxr4300
+                //usbb8600curl
                 // Get username and password from textboxes.
                 username = textBoxUsername.Text.Trim();
                 password = textBoxPassword.Text.Trim();
 
-                string oradb = "Data Source=ORCL;User Id="+usernameAdminTeam+";Password="+passwordAdminTeam+";";
+                
+                
+                string oradb = "Data Source=oracle.cms.waikato.ac.nz:1521/teaching;User Id=" + usernameAdminTeam + ";Password=" + passwordAdminTeam + ";";
+
                 OracleConnection conn = new OracleConnection(oradb);  // C#
                 conn.Open();
-                OracleCommand cmd = new OracleCommand();
+                OracleCommand cmd = new OracleCommand();/*
                 cmd.Connection = conn;
                 cmd.CommandText = "select TEAMID from player";
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader dr = cmd.ExecuteReader();
                 dr.Read();
-                label1.Text = dr.GetString(0);
-                conn.Dispose();
+                String team = dr.GetString(0);*/
+                cmd.Connection = conn;
+                cmd.CommandText = "select USERNAME from player where Username like '" + username + "'";
+                cmd.CommandType = CommandType.Text;
+                OracleDataReader dr = cmd.ExecuteReader();
+                dr.Read();
+                String resultUsername = dr.GetString(0);
 
+                cmd.CommandText = "select password from person where Username like '"+username+"'";
+                cmd.CommandType = CommandType.Text;
+                OracleDataReader dr3 = cmd.ExecuteReader();
+                dr3.Read();
+                String resultPassword = dr3.GetString(0);
+
+               
+                //conn.Dispose();
+
+
+                if (password.Equals(resultPassword))
+                {
+                    MessageBox.Show(resultUsername+" "+resultPassword);
+                    Player d = new Player();
+                    d.Owner = this;
+                    d.txtTeamName.Text = dr.GetString(0);
+                    d.conn = conn;
+                    d.ShowDialog();
+
+                }
 
 
             }
-            catch
+            catch (Exception ex)
             {
                 //Error message, more useful when you are storing numbers etc. into the database.
-                MessageBox.Show("Username or Password given is in an incorrect format.");
+                MessageBox.Show("Username or Password given is in an incorrect format."+ex);
                 textBoxUsername.Text = "";
                 textBoxPassword.Text = "";
                 textBoxUsername.Focus();
