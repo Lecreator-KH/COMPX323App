@@ -26,7 +26,7 @@ namespace COMPX323Milestone2
         {
             //Get the lisiting the user has clicked on
 
-            if (listBox1.Items.Count != 0)
+            if (listBox1.Items.Count != 0 &&  listBox1.SelectedItem!=null)
             {
                 String myString = Regex.Replace(listBox1.SelectedItem.ToString(), @"\s+", " ");
                 String[] sarray = myString.Split(' ');
