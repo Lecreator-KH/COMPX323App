@@ -24,7 +24,7 @@ namespace COMPX323Milestone2
 
         private void buttonWatchEvent_Click(object sender, EventArgs e)
         {
-            //need better fix
+            //Get the lisiting the user has clicked on
 
             if (listBox1.Items.Count != 0)
             {
@@ -33,18 +33,17 @@ namespace COMPX323Milestone2
                 MessageBox.Show(sarray[1]);
                 listBox2.Items.Clear();
 
-                //why doesnt this work
-
                 OracleCommand cmd2 = new OracleCommand();
                 cmd2.Connection = conn;
 
-                cmd2.CommandText = "Insert into watches values(\'" + userid + "\', " + sarray[0] + ", " + sarray[1] + ",'" + sarray[2] + "')";
+                //insert it into the watches list
+                cmd2.CommandText = "Insert into watches values (person, eventadte, starttime, location) (\'" + userid + "', to_date('" + sarray[0] + "', 'DD/MMYYYY'), to_date('" + sarray[1] + "', 'HH24:MI'), " + sarray[2] + "')";
                 cmd2.CommandType = CommandType.Text;
                 OracleDataReader drtest = cmd2.ExecuteReader();
             }
 
-            //this works
-
+            
+            // show all of the watches table
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
             cmd.CommandText = "select * from watches where person like '" + userid + "'";
@@ -87,18 +86,19 @@ namespace COMPX323Milestone2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // gets an entry that the user has watched
             String myString = Regex.Replace(listBox2.SelectedItem.ToString(), @"\s+", " ");
             String[] sarray = myString.Split(' ');
             String command = "DELETE  FROM  watches  WHERE person like '" + userid + "' and location like '" + sarray[3] + "'";
-
             listBox2.Items.Clear();
 
-
+            //executes it in the oracle db
             OracleCommand cmd = new OracleCommand();
             cmd.CommandText = command;
             cmd.CommandType = CommandType.Text;
             cmd.ExecuteNonQuery();
 
+            //requeries the remaining data
             cmd.CommandText = "select * from watches where person like '" + userid + "'";
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr2 = cmd.ExecuteReader();
