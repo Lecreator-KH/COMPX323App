@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace COMPX323Milestone2
 {
@@ -49,7 +50,7 @@ namespace COMPX323Milestone2
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             string username, password, email, firstname, lastname, organisation, phone;
-
+            Regex regex = new Regex(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$", RegexOptions.CultureInvariant | RegexOptions.Singleline);
             try
             {
                 // If role is not chosen, display message
@@ -66,11 +67,59 @@ namespace COMPX323Milestone2
                     firstname = textBoxFirstname.Text;
                     lastname = textBoxLastname.Text;
 
+                    if(username.Length < 5 || username.Length > 30)
+                    {
+                        MessageBox.Show("Username has to between 5 to 30 charcters long");
+                        return;
+                    }
+                    if (password.Length < 5 || password.Length > 30)
+                    {
+                        MessageBox.Show("Password has to between 5 to 30 charcters long");
+                        return;
+                    }
+                    if (email.Length > 50)
+                    {
+                        MessageBox.Show("Email max length is 50 charcters long");
+                        return;
+                    }
+                    bool emailCheck = regex.IsMatch(email);
+                    if(emailCheck == false)
+                    {
+                        MessageBox.Show("Invalid email format. EG abc@gmail.com");
+                        return;
+                    }
+                    if (firstname.Length <= 0 || firstname.Length > 30)
+                    {
+                        MessageBox.Show("Firstname has to between 1 to 30 charcters long");
+                        return;
+                    }
+                    if (lastname.Length <= 0 || lastname.Length > 30)
+                    {
+                        MessageBox.Show("Lastname has to between 1 to 30 charcters long");
+                        return;
+                    }
+
                     // If register for an organiser, get organisation and phone data
                     if (comboBoxRole.SelectedItem.ToString() == "Organizer")
                     {
                         organisation = textBoxOrganisation.Text;
                         phone = textBoxPhone.Text;
+
+                        if (organisation.Length <= 0 || organisation.Length > 50)
+                        {
+                            MessageBox.Show("Organisation has to between 1 to 50 charcters long");
+                            return;
+                        }
+                        if(phone.Length >= 11 || phone.Length < 7)
+                        {
+                            MessageBox.Show("Phone length too big");
+                            return;
+                        }
+                        if (int.TryParse(phone, out int phoneInt) == false)
+                        {
+                            MessageBox.Show("Please enter number only for phone");
+                            return;
+                        }
 
                         //Debug. display datat for organisation
                         MessageBox.Show("username: " + username + "\n" +

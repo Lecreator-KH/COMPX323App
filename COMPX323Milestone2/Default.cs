@@ -63,7 +63,7 @@ namespace COMPX323Milestone2
             listBox1.Items.Clear();
             String date = textBoxDate.Text;
             String comp = comboBox1.Text;
-           // string oradb = "Data Source=oracle.cms.waikato.ac.nz:1521/teaching;User Id=" + usernameAdminDefault + ";Password=" + passwordAdminDefault + ";";
+            // string oradb = "Data Source=oracle.cms.waikato.ac.nz:1521/teaching;User Id=" + usernameAdminDefault + ";Password=" + passwordAdminDefault + ";";
             //OracleConnection conn = new OracleConnection(oradb);  // C#
             //conn.Open();
             OracleCommand cmd = new OracleCommand();
