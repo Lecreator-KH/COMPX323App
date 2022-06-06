@@ -37,6 +37,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.labelWatch = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelUserName
@@ -124,11 +125,22 @@
             this.labelWatch.TabIndex = 35;
             this.labelWatch.Text = "Watched List";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(523, 36);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 29);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Remove";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(961, 449);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelWatch);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.comboBox1);
@@ -155,5 +167,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label labelWatch;
+        private System.Windows.Forms.Button button1;
     }
 }

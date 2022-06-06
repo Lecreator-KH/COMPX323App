@@ -26,24 +26,27 @@ namespace COMPX323Milestone2
         {
             //need better fix
 
+            if (listBox1.Items.Count != 0)
+            {
+                String myString = Regex.Replace(listBox1.SelectedItem.ToString(), @"\s+", " ");
+                String[] sarray = myString.Split(' ');
+                MessageBox.Show(sarray[1]);
+                listBox2.Items.Clear();
 
-            String myString = Regex.Replace(listBox1.SelectedItem.ToString(), @"\s+", " ");
-            String[] sarray=myString.Split(' ');
-            MessageBox.Show(sarray[1]);
-            listBox2.Items.Clear();
+                //why doesnt this work
 
-            //why doesnt this work
+                OracleCommand cmd2 = new OracleCommand();
+                cmd2.Connection = conn;
 
-            OracleCommand cmd2 = new OracleCommand();
-            cmd2.Connection = conn;
-
-            cmd2.CommandText = "Insert into watches values(\'" + userid + "\', " + sarray[0] + ", " + sarray[1] + ",'" + sarray[2] + "')";
-            cmd2.CommandType = CommandType.Text;
-            OracleDataReader drtest = cmd2.ExecuteReader();
+                cmd2.CommandText = "Insert into watches values(\'" + userid + "\', " + sarray[0] + ", " + sarray[1] + ",'" + sarray[2] + "')";
+                cmd2.CommandType = CommandType.Text;
+                OracleDataReader drtest = cmd2.ExecuteReader();
+            }
 
             //this works
 
             OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
             cmd.CommandText = "select * from watches where person like '" + userid + "'";
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
@@ -80,6 +83,33 @@ namespace COMPX323Milestone2
             }
            
            // conn.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String myString = Regex.Replace(listBox2.SelectedItem.ToString(), @"\s+", " ");
+            String[] sarray = myString.Split(' ');
+            String command = "DELETE  FROM  watches  WHERE person like '" + userid + "' and location like '" + sarray[3] + "'";
+
+            listBox2.Items.Clear();
+
+
+            OracleCommand cmd = new OracleCommand();
+            cmd.CommandText = command;
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandText = "select * from watches where person like '" + userid + "'";
+            cmd.CommandType = CommandType.Text;
+            OracleDataReader dr2 = cmd.ExecuteReader();
+            while (dr2.Read())
+            {
+                String result1 = dr2.GetString(0);
+                String result2 = dr2.GetString(1);
+                String result3 = dr2.GetString(2);
+                String result4 = dr2.GetString(3);
+                listBox2.Items.Add(result1.PadRight(15) + result2.PadRight(15) + result3.PadRight(30) + result4.PadLeft(5));
+            }
         }
     }
 }

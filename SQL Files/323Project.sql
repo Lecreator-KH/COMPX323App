@@ -130,6 +130,10 @@ CONSTRAINT FKEventDate3 foreign key(EventDate, StartTime, Location) references S
 Insert into Setting values('Indoor');
 Insert into Setting values('Outdoor');
 
+delete from watches where person like 'aaagynti72005'
+
+Insert into watches values('aaagynti72005',26/06/11,5:22,'qoerhivbajh')
+
 Insert into ViewingExperience values('In Person');
 Insert into ViewingExperience values('Streaming Platform');
 
@@ -146,6 +150,7 @@ Select * From RunIn;
 Select * From Attends;
 Select * From Watches;
 Select eventdate, TO_CHAR(startTime , 'HH24:MI'), location, person From Watches;
+
 
 -- Hash
 -- B-Tree Index
