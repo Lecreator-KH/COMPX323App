@@ -24,7 +24,7 @@ namespace COMPX323Milestone2
         private void buttonWatchEvent_Click(object sender, EventArgs e)
         {
             //need better fix
-            String[] sarray=listBox1.SelectedItem.ToString().Split(' ');
+            String[] sarray = listBox1.SelectedItem.ToString().Split(' ');
             MessageBox.Show(sarray[1]);
             listBox2.Items.Clear();
 
@@ -39,7 +39,7 @@ namespace COMPX323Milestone2
                 String result2 = dr.GetString(1);
                 String result3 = dr.GetString(2);
                 String result4 = dr.GetString(3);
-                listBox2.Items.Add(result1.PadRight(15)+ result2.PadRight(15) + result3.PadRight(15) + result4.PadRight(15) );
+                listBox2.Items.Add(result1.PadRight(15) + result2.PadRight(15) + result3.PadRight(15) + result4.PadRight(15));
             }
 
         }
@@ -49,7 +49,7 @@ namespace COMPX323Milestone2
             String sport = textBoxSport.Text;
             String date = textBoxDate.Text;
             String comp = comboBox1.Text;
-           // string oradb = "Data Source=oracle.cms.waikato.ac.nz:1521/teaching;User Id=" + usernameAdminDefault + ";Password=" + passwordAdminDefault + ";";
+            // string oradb = "Data Source=oracle.cms.waikato.ac.nz:1521/teaching;User Id=" + usernameAdminDefault + ";Password=" + passwordAdminDefault + ";";
             //OracleConnection conn = new OracleConnection(oradb);  // C#
             //conn.Open();
             OracleCommand cmd = new OracleCommand();
@@ -57,12 +57,13 @@ namespace COMPX323Milestone2
             cmd.CommandText = "select * from SportEvent where Eventdate = to_date('" + date + "','DD-MM-YY')";
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
-            while (dr.Read()) { 
-            String resultEventDate = dr.GetString(0);
-            listBox1.Items.Add(resultEventDate.PadRight(15)+"j");
-             }
-           
-           // conn.Dispose();
+            while (dr.Read())
+            {
+                String resultEventDate = dr.GetString(0);
+                listBox1.Items.Add(resultEventDate.PadRight(15) + "j");
+            }
+
+            // conn.Dispose();
         }
     }
 }

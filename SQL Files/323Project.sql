@@ -25,7 +25,7 @@ CONSTRAINT emailCheck check (email LIKE '%_@_%.___%')
 create table Organizer(
 Username varchar(30),
 Organization varchar(50) not null,
-PhoneNumber varchar(20),
+PhoneNumber varchar(11),
 
 CONSTRAINT PKOrg PRIMARY KEY (Username),
 CONSTRAINT FKOrg FOREIGN KEY (Username) REFERENCES Person ON DELETE CASCADE
@@ -60,7 +60,7 @@ create table Team(
 TeamID varchar(30),
 Name varchar(30) not null,
 TeamEmail varchar(50) not null,
-PhoneNumber varchar(20),
+PhoneNumber varchar(11),
 Website varchar(50) not null,
 Sport varchar(30),
 
@@ -145,7 +145,7 @@ Select * From ViewingExperience;
 Select * From RunIn;
 Select * From Attends;
 Select * From Watches;
-Select eventdate, TO_CHAR(startTime , 'HH:MI'), location, person From Watches;
+Select eventdate, TO_CHAR(startTime , 'HH24:MI'), location, person From Watches;
 
 -- Hash
 -- B-Tree Index
