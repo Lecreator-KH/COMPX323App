@@ -3,8 +3,8 @@
 {"username":"tk789", "email":"tk@yahoo.com", "password":"789", "Name":"Thomas Key", "Team":[{"TeamID":"1", "Name":"SKT", "Email":"skt@gmail.com","Phone":"877650521", "Site":"www.skt.com", "Sport":[{"Name":"League of Legend", "MinPlayer":"5", "MaxPlayer":"5", "Subs":"5", "Setting":"Indoor"}]}]}
 {"username":"sb111", "email":"sb@gmail.com", "password":"111", "Name":"Sally Brown", "Team":[{"TeamID":"1", "Name":"SKT", "Email":"skt@gmail.com","Phone":"877650521", "Site":"www.skt.com", "Sport":[{"Name":"League of Legend", "MinPlayer":"5", "MaxPlayer":"5", "Subs":"5", "Setting":"Indoor"}]}], "Watches":[{"EventDate":"05/06/2022","StartTime":"13:00","Address":"225 Beaumont Road"}]}
 {"username":"kk123", "email":"weq@gmail.com", "password":"123", "Name":"Kai Wen", "Team":[{"TeamID":"2", "Name":"TSM", "Email":"tsm@gmail.com","Phone":"7113867511", "Site":"www.tsm.com", "Sport":[{"Name":"League of Legend", "MinPlayer":"5", "MaxPlayer":"5", "Subs":"5", "Setting":"Indoor"}]}]}
-{"username":"jj123", "email":"jt66@gmail.com", "password":"123", "Name":"Jhonny Brown" "Watches":[{"EventDate":"08/06/2022","StartTime":"13:00","Address":"244 Sunburst Court"}]}
+{"username":"jj123", "email":"jt66@gmail.com", "password":"123", "Name":"Jhonny Brown", "Watches":[{"EventDate":"08/06/2022","StartTime":"13:00","Address":"244 Sunburst Court"}]}
 {"username":"bk32456", "email":"bk33@hotmail.com", "password":"456", "Name":"Tristana Yong"}
-{"username":"tk42789", "email":"tk44@yahoo.com", "password":"789", "Name":"Thomas Tan" "Watches":[{"EventDate":"08/06/2022","StartTime":"13:00","Address":"244 Sunburst Court"}]}
+{"username":"tk42789", "email":"tk44@yahoo.com", "password":"789", "Name":"Thomas Tan", "Watches":[{"EventDate":"08/06/2022","StartTime":"13:00","Address":"244 Sunburst Court"}]}
 {"username":"sb64111", "email":"s33b@gmail.com", "password":"111", "Name":"Garen Wu"}
 {"username":"kk18623", "email":"we33q@gmail.com", "password":"1234", "Name":"Karen Wang", "Team":[{"TeamID":"3", "Name":"RNG", "Email":"rng@gmail.com","Phone":"2081615316", "Site":"www.rng.com", "Sport":[{"Name":"League of Legend", "MinPlayer":"5", "MaxPlayer":"5", "Subs":"5", "Setting":"Indoor"}]}]}
