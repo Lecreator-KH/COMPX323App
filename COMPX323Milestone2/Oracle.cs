@@ -45,6 +45,9 @@ namespace COMPX323Milestone2
             conn.Dispose();
         }
 
+       
+
+
         public static void RegisterPersonMongoDB(string username, string password, string email, string firstname, string lastname)
         {
             // Connect MOngo DB, Enter username and password
@@ -52,40 +55,48 @@ namespace COMPX323Milestone2
             // Database name(username)
             IMongoDatabase db = dbClient.GetDatabase("tk229");
             // Collection's name
-            var things = db.GetCollection<BsonDocument>("person");
+            var things = db.GetCollection<BsonDocument>("test3");
 
             BsonDocument personDoc = new BsonDocument();
             
             BsonElement personUsernameElement = new BsonElement("username", username);           
             BsonElement personEmailElement = new BsonElement("email", email);
             BsonElement personPasswordElement = new BsonElement("password", password);
-            BsonElement personFirstnameElement = new BsonElement("firstname", firstname);
-            BsonElement personLastnameElement = new BsonElement("lastname", lastname);
+            BsonElement personNameElement = new BsonElement("name", firstname + " " + lastname);
+            
             personDoc.Add(personUsernameElement);
-            personDoc.Add(personPasswordElement);
             personDoc.Add(personEmailElement);
-            personDoc.Add(personFirstnameElement);
-            personDoc.Add(personLastnameElement);
+            personDoc.Add(personPasswordElement);
+            
+            personDoc.Add(personNameElement);
+            
 
             things.InsertOne(personDoc);
         }
 
-        public static void RegisterOrganiserMongoDB(string username, string organisation, string phone)
+        public static void RegisterOrganiserMongoDB(string username, string email, string password, string firstname, string lastname, string organisation, string phone)
         {
             // Connect MOngo DB, Enter username and password
             MongoClient dbClient = new MongoClient("mongodb://tk229:iHRV4zRqMA@mongodb.cms.waikato.ac.nz:27017");
             // Database name(username)
             IMongoDatabase db = dbClient.GetDatabase("tk229");
             // Collection's name
-            var things = db.GetCollection<BsonDocument>("organization");
+            var things = db.GetCollection<BsonDocument>("test3");
 
             BsonDocument personDoc = new BsonDocument();
 
             BsonElement personUsernameElement = new BsonElement("username", username);
+            BsonElement personEmailElement = new BsonElement("email", email);
+            BsonElement personPasswordElement = new BsonElement("password", password);
+            BsonElement personNameElement = new BsonElement("name", firstname + " " + lastname);
+
             BsonElement personOrganizationElement = new BsonElement("organization", organisation);
             BsonElement personPhoneElement = new BsonElement("phone", phone);
 
             personDoc.Add(personUsernameElement);
+            personDoc.Add(personEmailElement);
+            personDoc.Add(personPasswordElement);
+            personDoc.Add(personNameElement);
             personDoc.Add(personOrganizationElement);
             personDoc.Add(personPhoneElement);
 

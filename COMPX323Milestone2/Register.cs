@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using Oracle.ManagedDataAccess.Client;
 
 namespace COMPX323Milestone2
 {
     public partial class Register : Form
     {
+        public OracleConnection conn;
+
         public Register()
         {
             InitializeComponent();
@@ -131,6 +134,7 @@ namespace COMPX323Milestone2
                                         "phone: " + phone + "\n");
                         Oracle.RegisterPersonOracle(username, password, email, firstname, lastname);
                         Oracle.RegisterOrganiserOracle(username, organisation, phone);
+                        Oracle.RegisterOrganiserMongoDB(username, email, password, firstname, lastname, organisation, phone);
                     }
                     else
                     {
