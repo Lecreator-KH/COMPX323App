@@ -52,6 +52,7 @@
             // 
             // buttonWatchEvent
             // 
+            this.buttonWatchEvent.Enabled = false;
             this.buttonWatchEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonWatchEvent.Location = new System.Drawing.Point(16, 36);
             this.buttonWatchEvent.Name = "buttonWatchEvent";
